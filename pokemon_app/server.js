@@ -12,21 +12,23 @@
 const express = require("express");
 const app = express();
 const PORT = 3000;
+const Pokemon = require("./models/pokemon")
 
 app.get("/", (req, res) => {
 	res.send("Welcome to the Pokemon App!");
 })
-// - **In terminal**
-//   - `nodemon` or `nodemon server.js` (if you set your up your `package.json` to start `server.js` you don't need to put it after `nodemon`)
-//   - **GOTCHA!** : nodemon will only work if you run it from the same location as your `package.json`
-// - **In the browser**
-//  - go to `localhost:3000`
-//  - check that you have your `Welcome to the Pokemon App!` message displaying
 
-// <hr>
-//  &#x1F534; The commit message should read: <br>
-//  "Commit 3 - My server is set up and running"
-// <hr>
+//"Commit 3 - My server is set up and running"
+
+app.get("/pokemon", (req, res) => {
+	res.send(Pokemon);
+})
+
+
+//"Commit 4 - Connected my database, can see json in the browser"
+
+
+
 app.listen(PORT, () => {
 	console.log("I am listening on port 3000.");
 })
