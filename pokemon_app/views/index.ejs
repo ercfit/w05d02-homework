@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<style type="text/css">
-	body {
+	<title>POKEMON APP</title>
+
+<style type="text/css" ref="stylesheet" href="css/style.css">
+</head>
+<body>
+<style>
+body {
 		background-color: 550F91;
 		color: white;
 		font-family: 'Gaegu', cursive;
 	}
 	</style>
+
 	<h1>Behold...the Pokemon</h1>
-
-	<title>POKEMON APP</title>
-
-	
-</head>
-<body>
-
+	<ul>
+		<% for(let i = 0; i < pokemonList.length; i++){ %>
+            <li>
+			This is <a href="/pokemon/<%=i%>"><%=pokemonList[i].name;%></a>
+            </li>
+            <% } %>
+        </ul>
 </body>
 </html>
