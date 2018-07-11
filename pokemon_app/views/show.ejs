@@ -4,18 +4,18 @@
 	<title></title>
 	<style type="text/css">
 body {
-		background-color: 550F91;
+		background-color: #378250;
 		color: white;
 		font-family: 'Gaegu', cursive;
 	}
 	</style>
-
+<link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
 <link type="text/css" ref="stylesheet" href="css/style.css">
 </head>
 <body>
 	<h1>Gotta Catch 'Em All</h1>
 	<h2>Pokemon Name: <%= pokemon.name%></h2>
-	<img <%=(encodeURI(pokemon.img)) %>/>
+	<img src="<%= pokemon.img %>"/>
 	<a href="/pokemon">BACK</a>
 </body>
 </html>
