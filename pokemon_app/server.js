@@ -21,11 +21,12 @@ app.get("/", (req, res) => {
 //"Commit 3 - My server is set up and running"
 
 app.get("/pokemon", (req, res) => {
-	res.send(Pokemon);
-})
-
+	res.render("index.ejs", {"pokemonList":Pokemon})
+});
 
 //"Commit 4 - Connected my database, can see json in the browser"
+//"Commit 5 - index.ejs view rendered at pokemon route"
+
 
 
 
